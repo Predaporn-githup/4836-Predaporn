@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63070504836</title>
+    
+    <script>
+        function cuttingSpeed() {
+            let Dm = parseFloat(document.getElementById("dia").value);
+            let n = parseFloat(document.getElementById("speedn").value);
+            let Vc = (3.14 * Dm * n)/1000;
+            document.getElementById("speedc").value = Vc.toFixed(3);   
+        }
+    </script>
+    <script>
+        function feedRate() {
+            let fz = parseFloat(document.getElementById("feedpertooth").value);
+            let n2 = parseFloat(document.getElementById("speedn2").value);
+            let Zn = parseFloat(document.getElementById("numtooth").value);
+            let Vf = fz * Zn * n2 ;
+            document.getElementById("speedf").value = Vf.toFixed(3);
+            
+        }
+    </script>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .calculator1 {
+            background-color: #ffcc99;
+            width: 230px;
+            height: 230px;
+            border: 5px dotted #ff9966;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            font-family: monospace;
+            align-items: center;
+        }
+        .calculator2 {
+            background-color: #ffcc99;
+            width: 230px;
+            height: 280px;
+            border: 5px dotted #ff9966;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            font-family: monospace;
+            align-items: center;
+        }
+        .calculator1 h2 {
+            text-align: center;
+        }
+        .calculator2 h2 {
+            text-align: center;
+        }
+        .botton {
+            background-color: #ffcccc;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(61, 36, 26);
+            font-family: monospace;
+        }
+        body {
+            background-color: #ffffcc;
+        }
+    </style>
+</head>
+<body>
+    <div>
+     <h1> Cutting speed and Feed rate</h1>
+    </div>
+    <div class="container">
+    <!-- Cutting speed  -->   
+    <div class="calculator1">
+        <h2>Cutting speed </h2>
+        <label for="">Diameter (Dm)</label> <br>
+        <input type="text" name="" id="dia" size="10"> (mm) <br>
+        <br>
+        <label for="">Spindle speed (n)</label> <br>
+        <input type="text" name="" id="speedn" size="10"> (rev/min) <br>
+        <br>
+        <label for="">Cutting speed (Vc)</label> <br>
+        <input type="text" name="" id="speedc" size="10"> (m/min)
+        <br> <br>
+        <button class="botton" onclick="cuttingSpeed()">Enter</button>
+    </div>
+    <!-- Feed Rate -->    
+    <div class="calculator2">
+        <h2>Feed Rate</h2>
+        <label for="">Feed per teeth (fz) </label> <br>
+        <input type="text" name="" id="feedpertooth" size="10"> (mm/tooth) <br>
+        <br>
+        <label for="">Spindle speed (n)</label> <br>
+        <input type="text" name="" id="speedn2" size="10"> (rev/min) <br>
+        <br>
+        <label for="">Number of teeth (Zn)</label> <br>
+        <input type="text" name="" id="numtooth" size="10"> <br>
+        <br>
+        <label for="">Feed rate (Vf)</label> <br>
+        <input type="text" name="" id="speedf" size="10"> (mm/min) <br>
+        <br>
+        <button class="botton" onclick="feedRate()">Enter</button>
+    </div>
+    </div>
+    <center>
+        <img src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t1.15752-9/167268551_348653233236506_1269362077948106255_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_ohc=L8_U9uqmlKkAX8yojC7&_nc_ht=scontent.fbkk8-3.fna&oh=3bab195bd9eca67d46a37fa91546ccaa&oe=6089F9DF" 
+    alt='' width='300' height='200'>
+    </center>
+    
+</body>
+</html>
